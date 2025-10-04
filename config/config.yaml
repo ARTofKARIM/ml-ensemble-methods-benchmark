@@ -1,0 +1,30 @@
+data:
+  path: "data/dataset.csv"
+  target: "target"
+  test_size: 0.2
+  random_state: 42
+models:
+  bagging:
+    n_estimators: 100
+    max_samples: 0.8
+  random_forest:
+    n_estimators: 200
+    max_depth: 15
+  adaboost:
+    n_estimators: 100
+    learning_rate: 0.1
+  gradient_boosting:
+    n_estimators: 200
+    learning_rate: 0.05
+    max_depth: 5
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.03
+  lightgbm:
+    n_estimators: 300
+    learning_rate: 0.05
+  stacking:
+    cv: 5
+evaluation:
+  cv_folds: 5
+  scoring: "accuracy"
